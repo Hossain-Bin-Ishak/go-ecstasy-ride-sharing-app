@@ -8,8 +8,21 @@ export const initializeLoginFramework = () => {
         firebase.initializeApp(firebaseConfig);
     }
 }
+  export const handleGitHubSignIn = () => {
+    const gitHubProvider = new firebase.auth.GithubAuthProvider();
+    return firebase.auth().signInWithPopup(gitHubProvider).then(function(result) {
+      var token = result.credential.accessToken;
+      var user = result.user;
+      user.success = true;
+      return user;
+    }).catch(error => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorCode, errorMessage)
+    });
+  }
 
-export const handleGoogleSignIn = () => {
+  export const handleGoogleSignIn = () => {
     const googleProvider = new firebase.auth.GoogleAuthProvider();
     return firebase.auth().signInWithPopup(googleProvider)
     .then(res => {
@@ -36,21 +49,7 @@ export const handleGoogleSignIn = () => {
       var user = result.user;
       user.success = true;
       return user;
-    }).catch(error => {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      console.log(errorCode, errorMessage)
-    });
-  }
-
-  export const handleGitHubSignIn = () => {
-    const gitHubProvider = new firebase.auth.GithubAuthProvider();
-    return firebase.auth().signInWithPopup(gitHubProvider).then(function(result) {
-      var token = result.credential.accessToken;
-      var user = result.user;
-      user.success = true;
-      return user;
-    }).catch(error => {
+    }).catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
       console.log(errorCode, errorMessage)
@@ -70,7 +69,7 @@ export const handleGoogleSignIn = () => {
       }
       return signedOutUser;
     }).catch(err => {
-     console.log(err);
+      // An error happened.
     });
   }
 
@@ -99,7 +98,7 @@ export const handleGoogleSignIn = () => {
       newUserInfo.success = true;
       return newUserInfo;
     })
-    .catch(error => {
+    .catch(function(error) {
       const newUserInfo = {};
       newUserInfo.error = error.message;
       newUserInfo.success = false;
@@ -114,7 +113,7 @@ export const handleGoogleSignIn = () => {
       displayName: name
     }).then(function() {
       console.log('user name updated successfully')
-    }).catch(error => {
+    }).catch(function(error) {
       console.log(error)
     });
   }

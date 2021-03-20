@@ -6,7 +6,6 @@ import './Rider.css'
 import { useHistory, useParams } from 'react-router';
 import { UserContext } from '../../App';
 import fakeData from '../../fakeData/fakeData.json'
-import RideDetail from '../RideDetail/RideDetail';
 import RideInfo from '../RideDetail/RideInfo';
 
 const Rider = (props) => {

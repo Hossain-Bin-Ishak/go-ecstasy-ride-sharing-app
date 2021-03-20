@@ -9,7 +9,6 @@ import Header from '../Header/Header';
 import './Login.css';
 
 
-
 function Login() {
   const [newUser, setNewUser] = useState(false);
   const [user, setUser] = useState({
@@ -27,6 +26,16 @@ function Login() {
   const location = useLocation();
   let { from } = location.state || { from: { pathname: "/" } };
 
+
+  const gitHubSignIn = () => {
+    handleGitHubSignIn()
+    .then(res => {
+      handleResponse(res, true);
+    })
+}
+
+
+
   const googleSignIn = () => {
       handleGoogleSignIn()
       .then(res => {
@@ -41,14 +50,6 @@ function Login() {
       })
 
   }
-
-  const gitHubSignIn = () => {
-    handleGitHubSignIn()
-    .then(res => {
-      handleResponse(res, true);
-    })
-
-}
 
   const signOut = () => {
       handleSignOut()
@@ -74,7 +75,6 @@ function Login() {
       const isPasswordValid = e.target.value.length > 6;
       const passwordHasNumber =  /\d{1}/.test(e.target.value);
       isFieldValid = isPasswordValid && passwordHasNumber;
-      console.log(isPasswordValid, passwordHasNumber);
     }
     if(isFieldValid){
       const newUserInfo = {...user};
@@ -84,7 +84,7 @@ function Login() {
   }
   const handleSubmit = (e) => {
     if(newUser && user.email && user.password){
-      createUserWithEmailAndPassword(user.email, user.password)
+      createUserWithEmailAndPassword(user.name, user.email, user.password)
       .then(res => {
         handleResponse(res, true);
       })
@@ -103,8 +103,7 @@ function Login() {
 
   return (
     <div style={{textAlign: 'center'}}>
-        <Header></Header>
-      
+      <Header></Header>
       {
         user.isSignedIn && <div>
           <p>Welcome, {user.name}!</p>
@@ -113,15 +112,16 @@ function Login() {
         </div>
       }
 
-     
-      <form className='form-custimize' onSubmit={handleSubmit}>
+
+<form className='form-custimize' onSubmit={handleSubmit}>
       {newUser ? <h5>Create an Account</h5> : <h5>Login</h5>}
-        {newUser && <input name="name" type="text" onBlur={handleBlur} placeholder="Your name"/>}
+        {newUser && <input name="name" type="text" onBlur={handleBlur} placeholder="Your name"/> }
         <br/>
         <input type="email" name="email" onBlur={handleBlur} placeholder="Your Email address" required/>
         <br/>
         <input type="password" name="password" onBlur={handleBlur} placeholder="Your Password" required/>
-        
+        {/* <br/>
+        {newUser && <input type="password" name="confirm_password" onBlur={handleBlur} placeholder="Confirm Your Password" required/> } */}
         <br/>
         <input type="submit" value={newUser ? 'Sign up' : 'Sign in'}/>
         <br/>
@@ -131,10 +131,7 @@ function Login() {
       
       </form>
       <p>Or</p>
-        { user.isSignedIn ? <button onClick={signOut}>Sign Out</button> :
-        
-        <button className='signInBtn' onClick={googleSignIn}> <FontAwesomeIcon className="google" icon={faGoogle}/>  Continue with Google</button>
-        
+        { user.isSignedIn ? <button onClick={signOut}>Sign Out</button> : <button className='signInBtn' onClick={googleSignIn}> <FontAwesomeIcon className="google" icon={faGoogle}/>  Continue with Google</button>       
       }
       <br/>
      { user.isSignedIn ? <button onClick={signOut}>Sign Out</button> :  <button className='signInBtn' onClick={gitHubSignIn}> <FontAwesomeIcon className="github" icon={faGithub}/>  Continue with Github</button>}
@@ -144,6 +141,7 @@ function Login() {
      
       <p style={{color: 'red'}}>{user.error}</p>
       { user.success && <p style={{color: 'green'}}>User { newUser ? 'created' : 'Logged In'} successfully</p>}
+
     </div>
   );
 }
