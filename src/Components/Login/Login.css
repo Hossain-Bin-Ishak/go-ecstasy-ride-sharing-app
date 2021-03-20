@@ -1,0 +1,67 @@
+.form-custimize{
+    border: 1px solid #ddd;
+    display: inline-block;
+    padding: 36px;
+}
+.form-custimize input[type=text]{
+    width: 400px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+input[type=password]{
+    width: 400px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+input[type=email]{
+    width: 400px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+input[type=submit]{
+    width: 400px;
+    margin-bottom: 15px;
+    border: none;
+    padding: 8px;
+    background-color: coral;
+    color: white;
+    font-weight: bold;
+
+}
+
+.signInBtn{
+    width: 350px;
+    margin-bottom: 15px;
+    border: none;
+    padding: 8px;
+    background: no-repeat;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+}
+
+.facebook{
+    float: left;
+    font-size: 25px;
+    color:rgb(32, 103, 235);
+}
+
+.google{
+    float: left;
+    font-size: 25px;
+    color: coral;
+}
+
+.github{
+    float: left;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+}

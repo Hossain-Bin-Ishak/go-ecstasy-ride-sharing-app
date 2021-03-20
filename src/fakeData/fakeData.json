@@ -1,0 +1,37 @@
+[
+	{
+        "id" : "rider-1",
+        "name" : "BIKE",
+	"passenger" : "1",
+	"rent" : 20,
+	"image" : "https://i.ibb.co/G3Fp7wP/peopleicon.png",
+	"vehicle" : "https://i.ibb.co/NTGBgH6/Frame.png"
+	},
+  
+	{
+        "id" : "rider-2",
+        "name" : "CAR",
+	"passenger" : "4",
+	"rent" : 20,
+	"image" : "https://i.ibb.co/G3Fp7wP/peopleicon.png",
+	"vehicle" : "https://i.ibb.co/xm1MJDk/Frame-2.png"
+	},
+
+	{
+        "id" : "rider-3",
+        "name" : "BUS",
+	"passenger" : "4",
+	"rent" : 20,
+	"image" : "https://i.ibb.co/G3Fp7wP/peopleicon.png",
+	"vehicle" : "https://i.ibb.co/TWBgtML/Frame-1.png"
+	},
+
+	{
+        "id" : "rider-4",
+        "name" : "TRAIN",
+	"passenger" : "4",
+	"rent" : 75,
+	"image" : "https://i.ibb.co/G3Fp7wP/peopleicon.png",
+	"vehicle" : "https://i.ibb.co/KxStLVg/Group.png"
+	}
+]

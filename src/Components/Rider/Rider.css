@@ -1,0 +1,29 @@
+.riders-info{
+   
+    text-align: center;
+    background: rgb(236, 236, 236);
+    margin-left: 5px;
+    padding: 20px;
+    width: 240px;
+    border-radius: 10px;
+  
+}
+
+.riders-info img{
+    width: 75%;
+}
+
+.addBtn{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.vechicle-name{
+    margin-top: 10px;
+}
+
+.riders-info-area{
+    margin: 0 auto;
+    margin-bottom: 30px;
+    
+}

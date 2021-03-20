@@ -1,0 +1,44 @@
+.ride-form{
+    margin: 30px 100px;
+    background-color: #eee;
+    display: inline-block;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.ride-form input{
+    display: block;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.ride-form input[type = submit]{
+   
+   width: 300px;
+}
+
+.error{
+    color: red;
+}
+
+.ride-form label{
+    margin-bottom: 0px;
+    font-weight: 500;
+}
+
+.ride-details{
+    background-color: coral;
+    display: block;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.ride-details p{
+    margin: 0;
+    color: white;
+    font-weight: 500;
+}

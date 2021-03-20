@@ -1,0 +1,48 @@
+.form{
+    padding: 30px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+.form input[type=text]{
+    width: 400px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+.form input[type=email]{
+    width: 400px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+.form input[type=password]{
+    width: 400px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+.form input[type=submit]{
+   width: 400px;
+    border: none;
+    padding: 8px;
+    background-color: coral;
+    color: white;
+    font-weight: bold;
+
+}
+
+
+
+.form textarea{
+    border: none;
+    border-bottom:  1px solid #ddd;
+    margin-bottom: 20px;
+}

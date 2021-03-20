@@ -1,0 +1,14 @@
+.header-container{
+    background-image: url("https://patientengagementhit.com/images/site/features/NEMT_feature.jpg");
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    min-height: 850px;
+   
+}
+
+
+.content-area{
+    margin-top: 120px;
+}
+
