@@ -120,8 +120,8 @@ function Login() {
         <input type="email" name="email" onBlur={handleBlur} placeholder="Your Email address" required/>
         <br/>
         <input type="password" name="password" onBlur={handleBlur} placeholder="Your Password" required/>
-        {/* <br/>
-        {newUser && <input type="password" name="confirm_password" onBlur={handleBlur} placeholder="Confirm Your Password" required/> } */}
+        <br/>
+        {newUser && <input type="password" name="confirm_password" onBlur={handleBlur} placeholder="Confirm Your Password" required/> }
         <br/>
         <input type="submit" value={newUser ? 'Sign up' : 'Sign in'}/>
         <br/>

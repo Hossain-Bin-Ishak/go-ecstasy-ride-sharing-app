@@ -2,15 +2,14 @@
 
 *** Version 1.0.0 ***
 
-
-
 #### App Description
 
 This a dynamic Ride Sharing web application with some amazing and awesome features.
+
 You will get:
 
 - All types of ride sharing options at a glace in the Home page.
-- Explore Option to get ride details with dynamic features.
+- Pick Ride Option to get ride details with dynamic features.
 
 Test the Live App: https://go-ecstasy.web.app/
 # # Web Techonology Used
@@ -33,7 +32,7 @@ Test the Live App: https://go-ecstasy.web.app/
 - Edge
 # # App Installation
 
-Use the package manager (https://github.com/Porgramming-Hero-web-course/react-auth-web-developer-hossain) to install The Squard App - Team Tracker.
+Use the package manager (https://github.com/Porgramming-Hero-web-course/react-auth-web-developer-hossain) to install Go Ecstasy - Ride Sharing App.
 
 # # Contributor
 Hossain Bin Ishak <web.developer.hossain@gmail.com>
